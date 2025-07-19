@@ -53,5 +53,7 @@ while True:
 
     determine_winner(user_choice, computer_choice)
 
-    play_again = input('Do you want to play again? (yes/no): ')
-    if play_again.lower() != 'yes': break
+    if user_score == 5 or computer_score == 5:
+        print("Game Over!")
+        play_again = input('Do you want to play again? (y/n): ')
+        if play_again.lower() != 'y': break
